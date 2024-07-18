@@ -1,5 +1,12 @@
+import Menu from "../layout/Menu";
+
 const Create = () => {
-  return <div>Create</div>;
+  return (
+    <section className="flex">
+      <Menu />
+      <div>Create</div>
+    </section>
+  );
 };
 
 export default Create;

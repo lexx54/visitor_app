@@ -1,5 +1,11 @@
 {
-  "test": [
-    {"id": 1, "title": "test"}
+  "test": [{ "id": 1, "title": "test" }],
+  "users": [
+    {
+      "id": "b75a9043-8532-472b-8d0a-839b8f351e2b",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "123456"
+    }
   ]
 }

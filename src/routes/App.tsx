@@ -1,16 +1,10 @@
-import { useNavigate } from "react-router-dom";
+import Menu from "../layout/Menu";
 
 function App() {
-  const navigate = useNavigate();
-
   return (
-    <main>
-      <p className="bg-red-500" onClick={() => navigate("/")}>
-        Home
-      </p>
-      <p onClick={() => navigate("/login")}>Login</p>
-      <p onClick={() => navigate("/list")}>List</p>
-      <p onClick={() => navigate("/create")}>Creat</p>
+    <main className="flex">
+      <Menu />
+      <div>Principal</div>
     </main>
   );
 }
