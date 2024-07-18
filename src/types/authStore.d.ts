@@ -5,6 +5,13 @@ export interface User {
   password?: string;
 }
 
+export interface IVisitor {
+  name: string;
+  description: string;
+  phone: string;
+  email: string;
+}
+
 export interface IAuthStore {
   user: User | null;
   signIn: (user: User) => void;

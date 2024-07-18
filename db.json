@@ -1,11 +1,46 @@
 {
-  "test": [{ "id": 1, "title": "test" }],
+  "test": [
+    {
+      "id": 1,
+      "title": "test"
+    }
+  ],
   "users": [
     {
       "id": "b75a9043-8532-472b-8d0a-839b8f351e2b",
       "username": "admin",
       "email": "admin@gmail.com",
       "password": "123456"
+    }
+  ],
+  "visitors": [
+    {
+      "id": "58c9",
+      "email": "testuser@gmail.com",
+      "name": "testing user",
+      "phone": "04241820554",
+      "description": "Estudiante de segundo semestre"
+    },
+    {
+      "id": "4cc3",
+      "email": "testuser@gmail.com",
+      "name": "testing user",
+      "phone": "04241820554",
+      "description": "Estudiante de segundo semestre"
+    },
+    {
+      "id": "9901",
+      "email": "testuser@gmail.com",
+      "name": "testing user",
+      "phone": "04241820554",
+      "description": "Estudiante de segundo semestre"
+    },
+    {
+      "id": "69e7",
+      "email": "testuser@gmail.com",
+      "name": "testing user",
+      "phone": "04241820554",
+      "description": "Estudiante de segundo semestre"
     }
   ]
 }
