@@ -11,6 +11,12 @@
       "username": "admin",
       "email": "admin@gmail.com",
       "password": "123456"
+    },
+    {
+      "id": "bc32",
+      "email": "guest@gmail.com",
+      "password": "123456",
+      "username": "guest"
     }
   ],
   "visitors": [

@@ -12,6 +12,7 @@ const Menu = () => {
   const navigate = useNavigate();
   const { user, signOut } = useAuth();
   const localUser = localStorage.getItem("userAuth");
+  const username = localUser ? JSON.parse(localUser).username : "";
   const handleSignOut = () => {
     signOut();
     navigate("/login");
@@ -24,6 +25,14 @@ const Menu = () => {
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+          {username !== "" ? (
+            <p className="text-white uppercase font-bold">
+              bienvenido -{" "}
+              <span className="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-yellow-300 border border-yellow-300">
+                {username}
+              </span>
+            </p>
+          ) : null}
           <ul className="space-y-2 font-medium">
             {user !== null || localUser ? (
               <MenuItem path="/" label="Principal" Icon={FaHome} />
@@ -53,7 +62,7 @@ const Menu = () => {
             ) : null}
             {user === null && !localUser ? (
               <MenuItem
-                path="/create"
+                path="/register"
                 label="Registrarse"
                 Icon={PiNotePencilBold}
               />

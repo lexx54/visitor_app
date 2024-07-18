@@ -36,22 +36,10 @@ const Create = () => {
     <section className="flex">
       <Menu />
       <div className="w-full h-vh flex items-center justify-center bg-indigo-100">
-        <section className="text-gray-600 body-font relative w-3/4">
-          <div className="absolute inset-0 bg-red-300 bg-univerisity bg-cover shadow-lg">
-            {/* <iframe
-              // style="filter: grayscale(1) contrast(1.2) opacity(0.4);"
-              // marginheight="0"
-              // marginwidth="0"
-              title="map"
-              scrolling="no"
-              src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
-              width="100%"
-              height="100%"
-              // frameborder="0"
-            ></iframe> */}
-          </div>
-          <div className="container px-5 py-24 flex">
-            <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+        <section className="text-gray-600 body-font relative w-3/4 h-full flex">
+          <div className="absolute inset-0 bg-red-300 bg-univerisity bg-cover shadow-lg"></div>
+          <div className="container px-5 py-4 flex items-center justify-center">
+            <div className="w-1/3 bg-white rounded-lg p-8 flex flex-col md:ml-auto mt-10 md:mt-0 relative z-10 shadow-md">
               <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
                 Agregar visita
               </h2>
