@@ -1,7 +1,7 @@
 {
   "test": [
     {
-      "id": 1,
+      "id": "1",
       "title": "test"
     }
   ],
@@ -17,36 +17,13 @@
       "email": "guest@gmail.com",
       "password": "123456",
       "username": "guest"
+    },
+    {
+      "id": "1097",
+      "email": "test@gmail.com",
+      "password": "123456",
+      "username": "test"
     }
   ],
-  "visitors": [
-    {
-      "id": "58c9",
-      "email": "testuser@gmail.com",
-      "name": "testing user",
-      "phone": "04241820554",
-      "description": "Estudiante de segundo semestre"
-    },
-    {
-      "id": "4cc3",
-      "email": "testuser@gmail.com",
-      "name": "testing user",
-      "phone": "04241820554",
-      "description": "Estudiante de segundo semestre"
-    },
-    {
-      "id": "9901",
-      "email": "testuser@gmail.com",
-      "name": "testing user",
-      "phone": "04241820554",
-      "description": "Estudiante de segundo semestre"
-    },
-    {
-      "id": "69e7",
-      "email": "testuser@gmail.com",
-      "name": "testing user",
-      "phone": "04241820554",
-      "description": "Estudiante de segundo semestre"
-    }
-  ]
+  "visitors": []
 }

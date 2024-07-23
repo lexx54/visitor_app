@@ -1,11 +1,25 @@
 import { useNavigate } from "react-router-dom";
 import ListItem from "../components/ListItem";
 import Menu from "../layout/Menu";
+import { useEffect, useState } from "react";
+import { IVisitor } from "../types/authStore";
+import axios from "axios";
 
 const List = () => {
+  const [update, setUpdate] = useState(true)
   const navigate = useNavigate();
   const isLogged = localStorage.getItem("userAuth");
   if (!isLogged) navigate("/login");
+  const [visitors, setVisitors] = useState<IVisitor[]>([])
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const response = await axios.get<IVisitor[]>("http://localhost:3000/visitors");
+      setVisitors(response.data);
+      setUpdate(false)
+    };
+    if (update) getUsers();
+  }, [update])
   return (
     <section className="flex">
       <Menu />
@@ -27,66 +41,21 @@ const List = () => {
               role="list"
               className="divide-y divide-gray-200 dark:divide-gray-700"
             >
-              <ListItem
-                name="lexx"
-                email="lexx@gmail.com"
-                phone="04146543567"
-                description="Llego a las 9am"
-              />
-              <ListItem
-                name="Bonnie Green"
-                email="email@windster.com"
-                phone="04146555597"
-                description="Llego a las 9am"
-              />
-              <ListItem
-                name="Maria"
-                email="mary@gmail.com"
-                phone="04146543567"
-                description="Llego a las 9am"
-              />
-              <ListItem
-                name="joshep"
-                email="another@gmail.com"
-                phone="04146543567"
-                description="Llego a las 9am"
-              />
-              <ListItem
-                name="joshep"
-                email="another@gmail.com"
-                phone="04146543567"
-                description="Llego a las 9am"
-              />
-              <ListItem
-                name="joshep"
-                email="another@gmail.com"
-                phone="04146543567"
-                description="Llego a las 9am"
-              />
-              <ListItem
-                name="joshep"
-                email="another@gmail.com"
-                phone="04146543567"
-                description="Llego a las 9am"
-              />
-              <ListItem
-                name="joshep"
-                email="another@gmail.com"
-                phone="04146543567"
-                description="Llego a las 9am"
-              />
-              <ListItem
-                name="joshep"
-                email="another@gmail.com"
-                phone="04146543567"
-                description="Llego a las 9am"
-              />
-              <ListItem
-                name="joshep"
-                email="another@gmail.com"
-                phone="04146543567"
-                description="Llego a las 9am"
-              />
+              {
+                visitors.length === 0 ? <div className="flex items-center justify-center w-full h-[200px] text-white text-xl border">No hay visitantes actualmente</div> : null
+              }
+              {
+                visitors.map(visitor => (
+                  <ListItem
+                    name={visitor.name}
+                    email={visitor.email}
+                    phone={visitor.phone}
+                    description={visitor.description}
+                    id={visitor?.id}
+                    update={setUpdate}
+                  />
+                ))
+              }
             </ul>
           </div>
         </div>

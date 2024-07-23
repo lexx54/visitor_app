@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface User {
   id?: uuid;
   username: string;
@@ -10,6 +11,7 @@ export interface IVisitor {
   description: string;
   phone: string;
   email: string;
+  id?: any;
 }
 
 export interface IAuthStore {
